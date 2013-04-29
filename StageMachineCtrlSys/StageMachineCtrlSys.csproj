@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CD74F26-06E3-4B92-B6CD-5C404DD96506}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StageMachineCtrlSys</RootNamespace>
+    <AssemblyName>StageMachineCtrlSys</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DeviceAddressManager.cs" />
+    <Compile Include="BLL\DeviceInfoProcess.cs" />
+    <Compile Include="BLL\EmergencyProcess.cs" />
+    <Compile Include="BLL\FaultProcess.cs" />
+    <Compile Include="BLL\UserManager.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DAL\readConnectionConfig.cs" />
+    <Compile Include="Models\equimentInfo.cs" />
+    <Compile Include="Models\connectionConfig.cs" />
+    <Compile Include="Models\element.cs" />
+    <Compile Include="Models\faultLog.cs" />
+    <Compile Include="Models\param.cs" />
+    <Compile Include="Models\realTime.cs" />
+    <Compile Include="Models\users.cs" />
+    <Compile Include="UI\calcInfs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\calcInfs.Designer.cs">
+      <DependentUpon>calcInfs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DB_SMCS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SMCS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DB_SMCSDataSet.cs">
+      <DependentUpon>DB_SMCSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DB_SMCSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SMCSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frontSuspenderInMC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\frontSuspenderInMC.Designer.cs">
+      <DependentUpon>frontSuspenderInMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\liftsInmm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\liftsInmm.Designer.cs">
+      <DependentUpon>liftsInmm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\log.Designer.cs">
+      <DependentUpon>log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginBack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LoginBack.Designer.cs">
+      <DependentUpon>LoginBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\machineDemonstrate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\machineDemonstrate.Designer.cs">
+      <DependentUpon>machineDemonstrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\machineMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\machineMonitor.Designer.cs">
+      <DependentUpon>machineMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\mechineCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\mechineCtrl.Designer.cs">
+      <DependentUpon>mechineCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\repertoireManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\repertoireManage.Designer.cs">
+      <DependentUpon>repertoireManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\repetoreInRM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\repetoreInRM.Designer.cs">
+      <DependentUpon>repetoreInRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\rockerControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\rockerControl.Designer.cs">
+      <DependentUpon>rockerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\sceneInRM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\sceneInRM.Designer.cs">
+      <DependentUpon>sceneInRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\synchroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\synchroControl.Designer.cs">
+      <DependentUpon>synchroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\trackInRM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\trackInRM.Designer.cs">
+      <DependentUpon>trackInRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\turntableInmm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\turntableInmm.Designer.cs">
+      <DependentUpon>turntableInmm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\calcInfs.resx">
+      <DependentUpon>calcInfs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frontSuspenderInMC.resx">
+      <DependentUpon>frontSuspenderInMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\liftsInmm.resx">
+      <DependentUpon>liftsInmm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\log.resx">
+      <DependentUpon>log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginBack.resx">
+      <DependentUpon>LoginBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\machineDemonstrate.resx">
+      <DependentUpon>machineDemonstrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\machineMonitor.resx">
+      <DependentUpon>machineMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\mechineCtrl.resx">
+      <DependentUpon>mechineCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\repertoireManage.resx">
+      <DependentUpon>repertoireManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\repetoreInRM.resx">
+      <DependentUpon>repetoreInRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\rockerControl.resx">
+      <DependentUpon>rockerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\sceneInRM.resx">
+      <DependentUpon>sceneInRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\synchroControl.resx">
+      <DependentUpon>synchroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\trackInRM.resx">
+      <DependentUpon>trackInRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\turntableInmm.resx">
+      <DependentUpon>turntableInmm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\DB_SMCS.xsc">
+      <DependentUpon>DB_SMCS.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DB_SMCS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SMCS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\DB_SMCS.xss">
+      <DependentUpon>DB_SMCS.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DB_SMCSDataSet.xsc">
+      <DependentUpon>DB_SMCSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DB_SMCSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SMCSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\DB_SMCSDataSet.xss">
+      <DependentUpon>DB_SMCSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="connectionConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DB_SMCS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DB_SMCS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DB_SMCS.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OPCdotNETLib\OPCdotNETLib.csproj">
+      <Project>{B480F0B5-938E-43C4-9BA7-F3DC1ECFD8F6}</Project>
+      <Name>OPCdotNETLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

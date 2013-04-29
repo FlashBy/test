@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SMCS>
+	<name>舞台机械控制系统</name>
+	<author>妥吉英</author>
+	<function>舞台机械通信配置</function>
+	<characteristic>工业以太网</characteristic>
+	<communicationManner>OPC</communicationManner>
+	<firm>西门子</firm>
+	<version></version>
+	<contents>
+		<Curtains>
+			<Remark>吊杆系统</Remark>
+			<count></count>
+			<contents>
+				<Curtain remark="1#前舞台吊杆" type="" deviceNo.="1" address="S7:[S7 connection_1]MB1000,2"/>
+				<Curtain remark="2#前舞台吊杆" type="" deviceNo.="2" address="S7:[S7 connection_1]MB1002,2"/>
+				<Curtain remark="3#前舞台吊杆" type="" deviceNo.="3" address="S7:[S7 connection_1]MB1004,2"/>
+				<Curtain remark="4#前舞台吊杆" type="" deviceNo.="4" address="S7:[S7 connection_1]MB1006,2"/>
+				<Curtain remark="5#前舞台吊杆" type="" deviceNo.="5" address="S7:[S7 connection_1]MB1008,2"/>
+				<Curtain remark="6#前舞台吊杆" type="" deviceNo.="6" address="S7:[S7 connection_1]MB1010,2"/>
+				<Curtain remark="7#前舞台吊杆" type="" deviceNo.="7" address="S7:[S7 connection_1]MB1012,2"/>
+				<Curtain remark="8#前舞台吊杆" type="" deviceNo.="8" address="S7:[S7 connection_1]MB1014,2"/>
+				<Curtain remark="9#前舞台吊杆" type="" deviceNo.="9" address="S7:[S7 connection_1]MB1016,2"/>
+				<Curtain remark="10#前舞台吊杆" type="" deviceNo.="10" address="S7:[S7 connection_1]MB1018,2"/>
+				<Curtain remark="11#前舞台吊杆" type="" deviceNo.="11" address="S7:[S7 connection_1]MB1020,2"/>
+				<Curtain remark="12#前舞台吊杆" type="" deviceNo.="12" address="S7:[S7 connection_1]MB1020,2"/>
+				<Curtain remark="13#前舞台吊杆" type="" deviceNo.="13" address="S7:[S7 connection_1]MB1024,2"/>
+				<Curtain remark="14#前舞台吊杆" type="" deviceNo.="14" address="S7:[S7 connection_1]MB1026,2"/>
+			</contents>
+		</Curtains>
+		<Mesas>
+			<Remark>台面系统</Remark>
+			<count></count>
+			<contents>
+        <Curtain remark="1#前舞台吊杆" type="" No.="1" address="S7:[S7 connection_1]MB100,2"/>
+        <Curtain remark="2#前舞台吊杆" type="" No.="2" address="S7:[S7 connection_1]QB0"/>
+        <Curtain remark="3#前舞台吊杆" type="" No.="3" address="S7:[S7 connection_1]MW200"/>
+        <Curtain remark="4#前舞台吊杆" type="" No.="4" address="S7:[S7 connection_1]IB0,7"/>
+        <Curtain remark="5#前舞台吊杆" type="" No.="5" address="S7:[S7 connection_1]PIW752,4"/>
+        <Curtain remark="6#前舞台吊杆" type="" No.="6" address="S7:[S7 connection_1]PQW752,2"/>
+        <Curtain remark="7#前舞台吊杆" type="" No.="7" address="S7:[S7 connection_1]DB1,B0,20"/>
+			</contents>
+		</Mesas>
+		<Lights>
+			<Remark>灯光系统</Remark>
+			<count></count>
+			<contents>
+        <Curtain remark="1#前舞台吊杆" type="" No.="1" address="S7:[S7 connection_1]MB100,2"/>
+        <Curtain remark="2#前舞台吊杆" type="" No.="2" address="S7:[S7 connection_1]QB0"/>
+        <Curtain remark="3#前舞台吊杆" type="" No.="3" address="S7:[S7 connection_1]MW200"/>
+        <Curtain remark="4#前舞台吊杆" type="" No.="4" address="S7:[S7 connection_1]IB0,7"/>
+        <Curtain remark="5#前舞台吊杆" type="" No.="5" address="S7:[S7 connection_1]PIW752,4"/>
+        <Curtain remark="6#前舞台吊杆" type="" No.="6" address="S7:[S7 connection_1]PQW752,2"/>
+        <Curtain remark="7#前舞台吊杆" type="" No.="7" address="S7:[S7 connection_1]DB1,B0,20"/>
+			</contents>
+		</Lights>
+	</contents>
+</SMCS>
